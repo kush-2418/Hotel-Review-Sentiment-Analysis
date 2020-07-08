@@ -21,7 +21,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 
 
 
-df = pd.read_csv('/Users/kush/Downloads/Hotel Reviews Classification/hotel-reviews.csv')
+df = pd.read_csv('hotel-reviews.csv')
 print(df.head())
 
 print(df['Is_Response'].value_counts())

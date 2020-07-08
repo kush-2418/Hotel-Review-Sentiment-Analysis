@@ -10,7 +10,8 @@ Created on Tue Jul  7 23:08:56 2020
 import streamlit as st
 import pickle
 import numpy as np
-from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from bs4 import BeautifulSoup
@@ -79,8 +80,6 @@ def main():
             st.write("Yehh !!! it's a Positive Review 🙂")
     
     
-    
-
 
 if __name__ == '__main__':
     main()

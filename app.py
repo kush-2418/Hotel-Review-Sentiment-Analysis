@@ -65,14 +65,14 @@ def main():
     st.markdown("<body style='background-color:#E8E8E8;'><h1 style='text-align: center; color: black;'><marquee> Hotel Review Analysis </marquee></h1></body>", unsafe_allow_html=True)
 
     st.markdown("<body style='background-color:#101010;'><h2 style='text-align: center; color: blue;'> Predict Reviews</h2></body>", unsafe_allow_html=True)
-    st.markdown("<body style='background-color:#101010;'><h3 style='text-align: center; color: red;'> Enter the text to know whether it's a Positive or a Negative Review 👇</h3></body>", unsafe_allow_html=True)
-    news = st.text_input("")
+    st.markdown("<body style='background-color:#101010;'><h3 style='text-align: center; color: red;'> Enter the review to know whether it's a Positive or a Negative Review 👇</h3></body>", unsafe_allow_html=True)
+    review = st.text_input("")
 
     if st.button('Predict'):
-        news = clean_text(news)
-        news = [news]
-        news_vec = vec.transform(news).toarray()
-        pred = model.predict(news_vec)
+        review = clean_text()
+        review = [review]
+        review_vec = vec.transform(review).toarray()
+        pred = model.predict(review_vec)
 
         if pred == 'negative':
             st.write("It's a Negative Review😟")

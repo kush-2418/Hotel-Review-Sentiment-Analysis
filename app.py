@@ -69,7 +69,7 @@ def main():
     review = st.text_input("")
 
     if st.button('Predict'):
-        review = clean_text()
+        review = clean_text(review)
         review = [review]
         review_vec = vec.transform(review).toarray()
         pred = model.predict(review_vec)

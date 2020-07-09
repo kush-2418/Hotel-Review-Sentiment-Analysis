@@ -11,8 +11,7 @@ import streamlit as st
 import pickle
 import numpy as np
 import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
+
 
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
@@ -21,6 +20,7 @@ from nltk.tokenize import WordPunctTokenizer
 from PIL import Image
 import re,string
 from nltk.corpus import stopwords
+from nltk.corpus import wordnet
 
 stop_words = set(stopwords.words('english')) # 
 lemma = WordNetLemmatizer()

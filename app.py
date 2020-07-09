@@ -12,6 +12,7 @@ import pickle
 import numpy as np
 import nltk
 nltk.download('stopwords')
+nltk.download('wordnet')
 
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer

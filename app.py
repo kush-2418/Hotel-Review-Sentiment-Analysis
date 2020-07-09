@@ -12,8 +12,7 @@ import pickle
 import numpy as np
 import nltk
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+
 
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
@@ -45,8 +44,10 @@ def main():
 
         return model,vec
     
-
+    @st.cache(persist=True)
     def clean_text(text):
+        nltk.download('stopwords')
+        nltk.download('wordnet')
         soup = BeautifulSoup(text, 'lxml')
         souped = soup.get_text()
     

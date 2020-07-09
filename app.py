@@ -44,10 +44,8 @@ def main():
 
         return model,vec
     
-    @st.cache(persist=True)
     def clean_text(text):
-        nltk.download('stopwords')
-        nltk.download('wordnet')
+
         soup = BeautifulSoup(text, 'lxml')
         souped = soup.get_text()
     
